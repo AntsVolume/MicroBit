@@ -1,0 +1,14 @@
+# embed_your_turn
+
+from microbit import *
+
+s = ""
+t = ""
+
+while True:
+    s = input("> ")
+    if(s != 'run'):
+        t = t + s + "\n"
+    else:
+        exec(t)
+        t = ""
