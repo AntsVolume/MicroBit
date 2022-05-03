@@ -2,8 +2,6 @@
 
 from microbit import *
 
-sleep(1000)
-
 print("Division Calculations")
 
 while True:
