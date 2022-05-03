@@ -1,0 +1,28 @@
+# substitution_cipher_atbash
+ 
+from microbit import *
+ 
+# Atbash cipher.
+def atbash(text):
+    alpha  = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    crypta = "YWTFKAMIVUQSRZCHPENXJLODGB"
+    result = ""
+ 
+    for letter in text:
+        letter = letter.upper()
+        index = alpha.find(letter)
+        result = result + crypta[index]
+ 
+    return result
+ 
+# The script starts executing statements from here.
+ 
+print("Set your keyboard to CAPS LOCK.")
+print()
+ 
+while True:
+    plaintext = input("Enter a CAPS LOCK string: ")
+    
+    result = atbash(plaintext)
+ 
+    print("result =", result)
